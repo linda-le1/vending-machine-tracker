@@ -1,7 +1,8 @@
 <h1><%= @snack.name %></h1>
-Price: <%=number_to_currency(@snack.price)%></br>
+<h2>Price: <%=number_to_currency(@snack.price)%></h2>
+<h3>Locations</h3>
 <% @snack.machines.each do |machine| %>
-<%= machine.location %>:
+<li><%= machine.location %>:
 <%= machine.snack_count %> kinds of snacks,
-average price of <%= number_to_currency(machine.price_average) %></br>
+average price of <%= number_to_currency(machine.price_average) %></li>
 <% end %>

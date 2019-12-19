@@ -15,5 +15,6 @@ RSpec.describe 'When a user visits a snack show page', type: :feature do
       expect(page).to have_content("Price: $2.00")
       expect(page).to have_content("Don's Mixed Drinks: 2 kinds of snacks, average price of $1.50")
       expect(page).to have_content("Joe's Snack Shack: 2 kinds of snacks, average price of $1.75")
+
     end
   end
