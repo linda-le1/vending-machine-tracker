@@ -8,8 +8,9 @@ RSpec.describe 'When a user visits a vending machine show page', type: :feature 
     chips = dons.snacks.create(name: "Cheetos", price: 0.75)
 
     visit machine_path(dons)
-
-    expect(page).to have_content("#{soda.name}: $#{soda.price}")
-    expect(page).to have_content("#{chips.name}: $#{chips.price}")
+  save_and_open_page
+    expect(page).to have_content("#{soda.name}: $1.50")
+    expect(page).to have_content("#{chips.name}: $0.75")
+    save_and_open_page
   end
 end
