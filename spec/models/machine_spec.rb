@@ -7,6 +7,6 @@ RSpec.describe Machine, type: :model do
   end
   describe 'relationships' do
     it {should have_many :machine_snacks}
-    it {should have_many(:m).through(:machine_snacks)}
+    it {should have_many(:snacks).through(:machine_snacks)}
   end
 end
