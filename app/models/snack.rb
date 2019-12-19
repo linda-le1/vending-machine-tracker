@@ -3,4 +3,5 @@ class Snack < ApplicationRecord
   has_many :machines, through: :machine_snacks
 
   validates_presence_of :name
+
 end
